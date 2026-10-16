@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff1f7">
+  <title>Xu Yêu Thương ♡</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main class="container">
+    <header class="topbar">
+      <div class="brand-icon">♥</div>
+      <div>
+        <h1>Xu Yêu Thương</h1>
+        <p>Một chút yêu thương mỗi ngày ♡</p>
+      </div>
+    </header>
+
+    <section id="loginPanel" class="card">
+      <div class="big-heart">♥</div>
+      <h2>Chào mừng trở lại</h2>
+      <p class="muted">Đăng nhập vào thế giới nhỏ của hai người.</p>
+
+      <form id="loginForm">
+        <label for="email">Email</label>
+        <input id="email" type="email" autocomplete="email"
+          placeholder="Email của bạn" required>
+
+        <label for="password">Mật khẩu</label>
+        <input id="password" type="password"
+          autocomplete="current-password"
+          placeholder="Mật khẩu" required>
+
+        <button class="primary" type="submit">Đăng nhập ♡</button>
+      </form>
+      <p id="loginMessage" class="message" aria-live="polite"></p>
+    </section>
+
+    <section id="homePanel" hidden>
+      <div class="welcome">
+        <div>
+          <p class="eyebrow">OUR LITTLE WORLD</p>
+          <h2>Chào cậu, người thương! 💗</h2>
+          <p class="muted" id="accountEmail"></p>
+        </div>
+        <button id="logoutButton" class="secondary">Đăng xuất</button>
+      </div>
+
+      <section class="coin-card">
+        <p>Xu yêu thương hiện có</p>
+        <div class="balance"><span id="balance">0</span> <span>♡</span></div>
+        <div class="stats">
+          <div>
+            <span>Tổng xu đã tích</span>
+            <strong id="lifetime">0 xu</strong>
+          </div>
+          <div>
+            <span>Đã nhận hôm nay</span>
+            <strong id="today">0 / 4 xu</strong>
+          </div>
+        </div>
+      </section>
+
+      <section id="adminPanel" class="card" hidden>
+        <p class="eyebrow">ONLY FOR ADMIN</p>
+        <h2>Tặng một chút yêu thương 💌</h2>
+        <label for="recipient">Người nhận xu</label>
+        <select id="recipient" required>
+          <option value="">Đang tải tài khoản...</option>
+        </select>
+        <label for="note">Lời nhắn yêu thương</label>
+        <input id="note" maxlength="200"
+          placeholder="Ví dụ: Vì hôm nay cậu thật tuyệt!">
+        <button id="awardButton" class="primary" type="button">
+          ♥ Tích 1 xu yêu thương
+        </button>
+        <p id="awardMessage" class="message" aria-live="polite"></p>
+      </section>
+
+      <section class="card history-card">
+        <h2>Nhật ký yêu thương ✨</h2>
+        <div id="historyList">
+          <p class="muted">Đang tải lịch sử...</p>
+        </div>
+      </section>
+    </section>
+
+    <footer>Made with love, just for us ♡</footer>
+  </main>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
